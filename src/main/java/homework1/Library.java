@@ -7,19 +7,12 @@ public class Library {
 
     private static List<Book> books = new ArrayList<Book>();
 
-//    private static List <Book> authorBooks = new ArrayList<>();
-
     static {
         Book book0 = new Book("Герой нашего времени", "М. Ю. Лермонтов", 1833);
-        Library.addBook(book0);
+        Library.addBooks(book0);
     }
 
-    static void addBook(Book book){
-        books.add(book);
-    }
-
-    static void addBook(Book book, Book ... books){
-        Library.books.add(book);
+    static void addBooks(Book ... books){
         for(Book b : books){
             Library.books.add(b);
         }

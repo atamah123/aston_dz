@@ -3,11 +3,8 @@ package homework1;
 public class Book {
 
     private final String title;
-
     private final String author;
-
     private Integer year;
-
     private Boolean isAvailable;
 
 

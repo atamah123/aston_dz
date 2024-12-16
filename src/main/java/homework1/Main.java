@@ -11,10 +11,8 @@ public class Main {
         Book book3 = new Book("Евгений Онегин", "А. С. Пушкин", 1833);
         Book book4 = new Book("Идиот", "Ф. М. Достоевский", 1868);
 
-        Library.addBook(book1);
-        Library.addBook(book2);
-        Library.addBook(book3);
-        Library.addBook(book4);
+        Library.addBooks(book1);
+        Library.addBooks(book2, book3, book4);
 
 
 
@@ -23,11 +21,9 @@ public class Main {
         Library.printAvailableBooks();
 
         book1.borrowBook();
-
-
-////        book0.borrowBook(); - попытка взять книгу, которая инициализирована в static блоке из библиотеки
-//        Library.getBooks().getFirst().borrowBook(); // getBooks() возвращает static лист класса Library
-//                          // getFirst() метод List
+//        book0.borrowBook(); - попытка взять книгу, которая инициализирована в static блоке из библиотеки
+        Library.getBooks().getFirst().borrowBook(); // getBooks() возвращает static лист класса Library
+                          // getFirst() метод List
 
         System.out.println( "###########################################\n" +
                 "Выведем доступные к выдаче книги:");
