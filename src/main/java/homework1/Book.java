@@ -6,12 +6,12 @@ public class Book {
 
     private final String author;
 
-    private int year;
+    private Integer year;
 
-    private boolean isAvailable = true;
+    private Boolean isAvailable;
 
 
-    public Book(String title, String author, int year, boolean isAvailable) {
+    public Book(String title, String author, Integer year) {
         this.title = title;
         this.author = author;
         this.year = year;
@@ -21,21 +21,18 @@ public class Book {
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
+        this.isAvailable = true;
     }
 
 
     void borrowBook() {
-        if(isAvailable == false) {
-            System.out.println("Книга уже взята");
-        } else {
+        if(isAvailable) {
             isAvailable = false;
         }
     }
 
     void returnBook() {
-        if(isAvailable == true) {
-            System.out.println("Книга уже возвращена");
-        } else {
+        if(!isAvailable) {
             isAvailable = true;
         }
     }

@@ -7,10 +7,10 @@ public class Library {
 
     private static List<Book> books = new ArrayList<Book>();
 
-    private static List <Book> authorBooks = new ArrayList<>();
+//    private static List <Book> authorBooks = new ArrayList<>();
 
     static {
-        Book book0 = new Book("Герой нашего времени", "М. Ю. Лермонтов", 1833, true);
+        Book book0 = new Book("Герой нашего времени", "М. Ю. Лермонтов", 1833);
         Library.addBook(book0);
     }
 
@@ -33,9 +33,8 @@ public class Library {
         }
     }
 
-    static List<Book> findBookByAuthor(String author){
-
-        authorBooks.clear();
+    static void findBookByAuthor(String author){
+        List <Book> authorBooks = new ArrayList<>();
 
         for(Book b : books){
             if(b.getAuthor().equals(author)){
@@ -44,8 +43,6 @@ public class Library {
                 System.out.println(b.toString());
             }
         }
-
-        return new ArrayList<>(authorBooks);
     }
 
     static void displayInfo() {
