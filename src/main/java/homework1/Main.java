@@ -25,9 +25,9 @@ public class Main {
         book1.borrowBook();
 
 
-//        book0.borrowBook(); - попытка взять книгу, которая инициализирована в static блоке из библиотеки
-        Library.getBooks().getFirst().borrowBook(); // getBooks() возвращает static лист класса Library
-                          // getFirst() метод List
+////        book0.borrowBook(); - попытка взять книгу, которая инициализирована в static блоке из библиотеки
+//        Library.getBooks().getFirst().borrowBook(); // getBooks() возвращает static лист класса Library
+//                          // getFirst() метод List
 
         System.out.println( "###########################################\n" +
                 "Выведем доступные к выдаче книги:");
