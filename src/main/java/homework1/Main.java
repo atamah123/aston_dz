@@ -1,5 +1,6 @@
 package homework1;
 
+import java.io.Externalizable;
 import java.util.List;
 
 public class Main {
@@ -11,8 +12,8 @@ public class Main {
         Book book3 = new Book("Евгений Онегин", "А. С. Пушкин", 1833);
         Book book4 = new Book("Идиот", "Ф. М. Достоевский", 1868);
 
-        Library.addBooks(book1);
-        Library.addBooks(book2, book3, book4);
+        Library.addBooksOrBooks(book1);
+        Library.addBooksOrBooks(book2, book3, book4);
 
 
 

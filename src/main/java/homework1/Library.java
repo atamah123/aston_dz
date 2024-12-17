@@ -9,10 +9,10 @@ public class Library {
 
     static {
         Book book0 = new Book("Герой нашего времени", "М. Ю. Лермонтов", 1833);
-        Library.addBooks(book0);
+        Library.addBooksOrBooks(book0);
     }
 
-    static void addBooks(Book ... books){
+    static void addBooksOrBooks(Book ... books){
         for(Book b : books){
             Library.books.add(b);
         }
@@ -27,13 +27,9 @@ public class Library {
     }
 
     static void findBookByAuthor(String author){
-        List <Book> authorBooks = new ArrayList<>();
-
         for(Book b : books){
             if(b.getAuthor().equals(author)){
-                Book copyBook = b;
-                authorBooks.add(copyBook);
-                System.out.println(b.toString());
+                System.out.println(b);
             }
         }
     }
