@@ -12,8 +12,8 @@ public class Main {
         Book book3 = new Book("Евгений Онегин", "А. С. Пушкин", 1833);
         Book book4 = new Book("Идиот", "Ф. М. Достоевский", 1868);
 
-        Library.addBooksOrBooks(book1);
-        Library.addBooksOrBooks(book2, book3, book4);
+        Library.addBook(book1);
+        Library.addBook(book2, book3, book4);
 
 
 

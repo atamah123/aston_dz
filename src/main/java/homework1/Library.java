@@ -1,6 +1,7 @@
 package homework1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Library {
@@ -9,13 +10,11 @@ public class Library {
 
     static {
         Book book0 = new Book("Герой нашего времени", "М. Ю. Лермонтов", 1833);
-        Library.addBooksOrBooks(book0);
+        Library.addBook(book0);
     }
 
-    static void addBooksOrBooks(Book ... books){
-        for(Book b : books){
-            Library.books.add(b);
-        }
+    static void addBook(Book ... book){
+        Collections.addAll(books, book);
     }
 
     static void printAvailableBooks(){
