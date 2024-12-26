@@ -6,6 +6,7 @@ public class Book {
     private final String author;
     private Integer year;
     private Boolean isAvailable;
+    private int numberOfPages;
 
 
     public Book(String title, String author, Integer year) {
@@ -48,6 +49,14 @@ public class Book {
 
     public int getYear() {
         return year;
+    }
+
+    public void setNumberOfPages(int numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
+
+    public int getNumberOfPages() {
+        return numberOfPages;
     }
 
     public void setYear(int year) {
